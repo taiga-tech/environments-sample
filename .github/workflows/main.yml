@@ -7,26 +7,26 @@ jobs:
   deploy_development:
     runs-on: ubuntu-latest
     environment:
-      name: development
+      name: Development
       url: https://bing.com
     steps:
-      - run: echo deploy development
+      - run: echo deploy Development
       # - run: echo secret ${{ secrets.SAMPLE_SECRET }}
 
   deploy_staging:
     runs-on: ubuntu-latest
     environment:
-      name: staging
+      name: Staging
       url: https://yahoo.co.jp
     steps:
-      - run: echo deploy staging
+      - run: echo deploy Staging
       # - run: echo secret ${{ secrets.SAMPLE_SECRET }}
 
   deploy_production:
     runs-on: ubuntu-latest
     environment:
-      name: production
+      name: Production
       url: https://google.com
     steps:
-      - run: echo deploy production
+      - run: echo deploy Production
       # - run: echo secret ${{ secrets.SAMPLE_SECRET }}
