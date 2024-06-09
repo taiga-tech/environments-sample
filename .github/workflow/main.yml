@@ -1,0 +1,32 @@
+name: Deploy
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy_development:
+    runs-on: ubuntu-latest
+    environment:
+      name: development
+      url: https://bing.com
+    steps:
+      - run: echo deploy development
+      # - run: echo secret ${{ secrets.SAMPLE_SECRET }}
+
+  deploy_staging:
+    runs-on: ubuntu-latest
+    environment:
+      name: staging
+      url: https://yahoo.co.jp
+    steps:
+      - run: echo deploy staging
+      # - run: echo secret ${{ secrets.SAMPLE_SECRET }}
+
+  deploy_production:
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://google.com
+    steps:
+      - run: echo deploy production
+      # - run: echo secret ${{ secrets.SAMPLE_SECRET }}
